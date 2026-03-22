@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在 Claude Code 中使用 MCP 扩展功能</title>
+  <style>
+    body { font-family: sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    pre { background: #f4f4f4; padding: 1rem; border-radius: 4px; overflow-x: auto; }
+    code { background: #f4f4f4; padding: 0.1em 0.3em; border-radius: 3px; }
+    pre code { background: none; padding: 0; }
+    blockquote { border-left: 4px solid #ccc; margin: 0; padding-left: 1rem; color: #555; }
+    img { max-width: 100%; }
+  </style>
+</head>
+<body>
+<h1>在 Claude Code 中使用 MCP 扩展功能</h1>
+
+<h2>Claude Code 里面安装 TickTick MCP</h2>
+
+<p>一个是 Claude Code 的 MCP 接入文档：<a href="https://code.claude.com/docs/zh-CN/mcp">通过 MCP 将 Claude Code 连接到工具</a>，另一个是 <a href="https://help.ticktick.com/articles/7438129581631995904">TickTick MCP</a> 官方的提供的 MCP 的文档。</p>
+
+<p>直接添加上，然后重启 Claude Code。</p>
+
+<pre><code class="language-shell">claude mcp add -transport http ticktick https://mcp.ticktick.com</code></pre>
+
+<p>触发一下 Auth，然后就可以直接创建任务了。</p>
+
+<p>简单的比如创建任务、创建带时间的任务、往某个项目里创建任务（会先 list 一下项目拿到项目 id，然后再往里面添加）…</p>
+
+<h2>扩展一下，自己创建 MCP</h2>
+
+<p>有时候一些固定的工作可以写成脚本，然后再生成一个本地的 MCP 包裹起来，就可以方便地用 AI 来触发它。整个过程都可以让 Claude Code 来完成。</p>
+</body>
+</html>
